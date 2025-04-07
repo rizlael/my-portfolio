@@ -1,0 +1,299 @@
+@keyframes waveAnimation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: waveAnimation 1.8s infinite cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3b82f6; /* Warna biru */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+  color: #3b82f6; /* Warna biru saat hover */
+  text-shadow: 0px 0px 10px rgba(59, 130, 246, 0.8);
+}
+
+#navbar {
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efek Hover untuk Navbar */
+.nav-link {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Efek hover dengan garis bawah */
+.nav-link {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #3B82F6;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #3B82F6;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Efek navbar berubah warna saat scroll */
+.navbar-scroll {
+    background-color: rgba(17, 24, 39, 0.9); /* Semi transparan */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Menu mobile agar lebih smooth */
+#mobile-menu {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Tombol utama */
+.btn-primary {
+  border: 2px solid #3B82F6;
+  color: #3B82F6;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #3B82F6;
+  color: white;
+}
+
+/* Tombol sekunder */
+.btn-secondary {
+  border: 2px solid #3B82F6;
+  color: #3B82F6;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background: #3B82F6;
+  color: white;
+}
+
+/*page home*/
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Tombol Scroll ke Atas */
+#scrollToTop {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#scrollToTop:hover {
+  background: #454446;
+}
+
+.parallax {
+  background: url("https://source.unsplash.com/1600x900/?technology") no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+.glass-navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black; /* Sesuai tema */
+  z-index: 0; /* Pastikan di belakang konten */
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 50; /* Pastikan navbar tetap di atas */
+}
+
+#home .container {
+  position: relative;
+  z-index: 10; /* Pastikan teks di atas partikel */
+}
+
+#home img:hover {
+  box-shadow: 0px 0px 20px 5px rgba(59, 130, 246, 0.6);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.parallax-bg {
+  background-image: url('https://source.unsplash.com/1600x900/?technology');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-img {
+  transition: transform 0.1s ease-out;
+}
+
+.flip-card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.flip-card-front {
+  background: cyan;
+}
+
+.flip-card-back {
+  background: blue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Efek Glitch */
+.glitch-text {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6);
+  animation: glitch 1.5s infinite alternate;
+  line-height: 1.2; /* Menyesuaikan jarak antar baris */
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px 5px rgba(0, 255, 255, 0.8); }
+  50% { text-shadow: -2px -2px 5px rgba(255, 0, 255, 0.8); }
+  100% { text-shadow: 2px -2px 5px rgba(0, 255, 255, 0.8); }
+}
+
+
+/* Efek Teks Terbelah */
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background: black;
+}
+
+/* Lapisan Merah */
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -2px 0 red;
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-layer 2s infinite linear alternate-reverse;
+}
+
+/* Lapisan Biru */
+.glitch-text::after {
+  left: -2px;
+  text-shadow: -2px 0 blue;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-layer 2s infinite linear alternate;
+}
+
+/* Animasi Glitch */
+@keyframes glitch-layer {
+  0% {
+      clip: rect(12px, 550px, 80px, 0);
+  }
+  100% {
+      clip: rect(80px, 550px, 140px, 0);
+  }
+}
