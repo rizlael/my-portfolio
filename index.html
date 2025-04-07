@@ -367,19 +367,16 @@
         <p class="text-gray-300 text-lg mt-4" data-aos="fade-up"><i class="fab fa-github text-blue-500"></i> <a href="https://github.com/rizlael" target="_blank" class="text-blue-500 hover:underline">GitHub</a></p>
     </div>
     <div class="text-white text-center mt-4" data-aos="fade-up">
-        This page has been visited <span id="visitor-count">...</span> times.
+        This page has been visited <span id="counter">...</span> times.
       </div>
       
       <script>
-        // Ganti key dengan nama unik kamu
-        const counterKey = 'rizlael.my-portfolio';
-      
-        fetch(`https://api.countapi.xyz/hit/${counterKey}/visits`)
-          .then(response => response.json())
-          .then(data => {
-            document.getElementById('visitor-count').textContent = data.value;
-          });
-      </script>
+  fetch('https://api.countapi.xyz/hit/rizlael.github.io/my-portfolio')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('counter').innerText = data.value;
+    });
+</script>
 </section>
 
 <!-- Modal -->
